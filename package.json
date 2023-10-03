@@ -1,0 +1,23 @@
+{
+  "name": "memory-man",
+  "version": "1.0.0",
+  "description": "This npm package streamlines memory management to node.js from C++.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node tests/test",
+    "install": "node-gyp rebuild"
+  },
+  "keywords": [
+    "cpp",
+    "node",
+    "memory",
+    "addon"
+  ],
+  "author": "OguzhanUmutlu",
+  "license": "MIT",
+  "types": "./index.d.ts",
+  "gypfile": true
+}
