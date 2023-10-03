@@ -1,6 +1,6 @@
 {
   "name": "memory-man",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This npm package streamlines memory management to node.js from C++.",
   "main": "index.js",
   "directories": {

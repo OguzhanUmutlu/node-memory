@@ -39,29 +39,6 @@ napi_value NM_malloc(napi_env env, napi_callback_info info)
     return ret;
 }
 
-napi_value NM_address_view(napi_env env, napi_callback_info info)
-{
-    size_t argc = 2;
-    napi_value args[2];
-    PREPARE_ARGS(nullptr);
-    if (argc != 2)
-        NAPI_THROW("Expected exactly 2 arguments for the function call memory.address_view()", nullptr);
-    int64_t address;
-    int32_t readSize;
-    napi_get_value_int64(env, args[0], &address);
-    napi_get_value_int32(env, args[1], &readSize);
-    char *point = reinterpret_cast<char *>(address);
-    napi_value arr;
-    napi_create_array_with_length(env, readSize, &arr);
-    for (int i = 0; i < readSize; i++)
-    {
-        napi_value val;
-        napi_create_int32(env, point[i], &val);
-        napi_set_named_property(env, arr, std::to_string(i).c_str(), val);
-    }
-    return arr;
-}
-
 napi_value NM_address_set(napi_env env, napi_callback_info info)
 {
     size_t argc = 3;
