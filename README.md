@@ -25,7 +25,7 @@ const MemoryMan = require("memory-man");
 Now you can access the functions of the Memory Man!
 
 ```js
-const {malloc, calloc, realloc, free, address_set, address_get, address_view} = MemoryMan;
+const {malloc, calloc, realloc, free, address_set, address_get} = MemoryMan;
 ```
 
 # malloc(size)

@@ -45,7 +45,7 @@ napi_value NM_address_set(napi_env env, napi_callback_info info)
     napi_value args[3];
     PREPARE_ARGS(nullptr);
     if (argc != 3)
-        NAPI_THROW("Expected exactly 3 arguments for the function call memory.address_view()", nullptr);
+        NAPI_THROW("Expected exactly 3 arguments for the function call memory.address_set()", nullptr);
     int64_t address;
     int32_t index;
     int32_t value;
@@ -134,7 +134,6 @@ napi_value init(napi_env env, napi_value exports)
 {
     napi_value object;
     napi_create_object(env, &object);
-    SET_FUNCTION(NM_address_view, address_view);
     SET_FUNCTION(NM_address_get, address_get);
     SET_FUNCTION(NM_address_set, address_set);
     SET_FUNCTION(NM_malloc, malloc);
